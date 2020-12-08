@@ -17,6 +17,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.4.0'
+	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
 }
 
 test {
