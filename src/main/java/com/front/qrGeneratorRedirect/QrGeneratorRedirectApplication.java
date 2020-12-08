@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class QrGeneratorRedirectApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(QrGeneratorRedirectApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(QrGeneratorRedirectApplication.class, args);
+    }
 
 }
