@@ -18,8 +18,16 @@ public class StaticQrController {
 
     @GetMapping("/qrByProduct")
     public String getUrlById(@RequestParam(value = "id") Long id, Model model) {
-        String name = staticQrService.getQrInfo(id);
-        model.addAttribute("name", name);
+        String dinamicUrl = staticQrService.getDinamicUrl(id);
+        model.addAttribute("dinamicUrl", dinamicUrl);
         return "qrRedirect";
+    }
+
+    @GetMapping("/productIdentifier/qrImage")
+    public String getQrImage(@RequestParam(value = "id") Long id, Model model) {
+        String qrImage = staticQrService.getQrImage(id);
+        model.addAttribute("qrImage", qrImage);
+        System.out.println(">>>>>> "+ qrImage);
+        return "qrImage";
     }
 }
