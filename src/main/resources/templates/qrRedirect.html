@@ -1,12 +1,11 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <!-- <meta http-equiv="refresh" content="0; url=http://example.com/" /> -->
+    <title>QR track</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="refresh" th:content="'0; url=' + ${name} + ''"/>
 </head>
 <body>
-<p th:text="'Hello, ' + ${name} + '!'" />
+<p th:text="'redirigiendo a, ' + ${name} + '!'"/>
 </body>
 </html>

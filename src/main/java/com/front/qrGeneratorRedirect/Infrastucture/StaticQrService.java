@@ -1,6 +1,5 @@
 package com.front.qrGeneratorRedirect.Infrastucture;
 
-import com.front.qrGeneratorRedirect.Domain.QrInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -17,10 +16,10 @@ public class StaticQrService {
     public StaticQrService(WebClient localApiClient) {
         this.localApiClient = localApiClient;
     }
-    public QrInfo getQrInfo(long id){
+    public String getQrInfo(long id){
         return localApiClient
-                .get().uri("/qrByProduct/1")
-                .retrieve().bodyToMono(QrInfo.class)
+                .get().uri("/qrByProduct/"+id)
+                .retrieve().bodyToMono(String.class)
                 .block(REQUEST_TIMEOUT);
     }
 }
