@@ -6,8 +6,8 @@
 </head>
 <body>
 <h1>Result</h1>
-<p th:text="'id: ' + ${qrInfo.urlQrId}" />
-<p th:text="'content: ' + ${qrInfo.name}" />
+<p th:text="'Identificador: ' + ${qrInfo.urlQrId}" />
+<p th:text="'Nombre Descriptivo: ' + ${qrInfo.name}" />
 <p th:text="'url: ' + ${qrInfo.dinamicUrl}" />
 <img id='barcode' th:src="'https://api.qrserver.com/v1/create-qr-code/?data=https://qr-generator-redirect.herokuapp.com/qrByProduct?id='+ ${qrInfo.urlQrId}" alt="" title="HELLO" width="150" height="150" />
 </br>

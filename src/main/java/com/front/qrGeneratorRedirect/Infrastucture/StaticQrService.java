@@ -35,6 +35,7 @@ public class StaticQrService {
     }
 
     public QrInfo createProductIdentifier(QrInfo qrInfo){
+        qrInfo.setDinamicUrl("https://" + qrInfo.getDinamicUrl());
         return localApiClient
                 .post().uri("/productIdentifier/")
                 .body(Mono.just(qrInfo), QrInfo.class)

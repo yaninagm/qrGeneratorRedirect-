@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:url="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,8 +8,8 @@
 <h1>Form</h1>
 <form action="#" th:action="@{/productIdentifier}" th:object="${qrInfo}" method="post">
     <p>Identificador: <input type="text" th:field="*{urlQrId}" /></p>
-    <p>Name: <input type="text" th:field="*{name}" /></p>
-    <p>Url: <input type="text" th:field="*{dinamicUrl}" /></p>
+    <p>Nombre: <input type="text" url:valid th:field="*{name}" /></p>
+    <p>Url: https://<input type="text" th:field="*{dinamicUrl}" /></p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
 </body>
